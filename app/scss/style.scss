@@ -15,12 +15,14 @@
 main {
     flex: 1 0 auto;
 }
-.logo{
+
+.logo {
 
 
     &:hover {
         opacity: 0.8;
     }
+
     &:active {
         opacity: 0.5;
     }
@@ -39,10 +41,11 @@ main {
     &__link {
 
         &:hover {
-        color: $orange-900;
+            color: $orange-900;
         }
+
         &:active {
-        text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+            text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
         }
     }
 
@@ -73,16 +76,18 @@ main {
                 min-width: 23px;
                 height: 24px;
                 background-color: $silver-100;
-                mask-image: url('../images/sprite.svg#icon-search');         ; 
+                mask-image: url('../images/sprite.svg#icon-search');
+                ;
                 mask-repeat: no-repeat;
                 mask-size: contain;
                 mask-position: center;
             }
-            & > span {
+
+            &>span {
                 background: $silver-100;
                 color: $orange-900;
             }
-            
+
         }
 
         &:active {
@@ -90,25 +95,28 @@ main {
             background-color: $Sea_foam;
         }
 
-        &::before{
+        &::before {
             content: '';
             min-width: 23px;
             height: 24px;
             background-color: $darcBlue-900;
-            mask-image: url('../images/sprite.svg#icon-search');         ; 
+            mask-image: url('../images/sprite.svg#icon-search');
+            ;
             mask-repeat: no-repeat;
             mask-size: contain;
             mask-position: center;
         }
+
         &--cart::before {
             mask-image: url('../images/sprite.svg#icon-cart');
         }
 
         &--cart:hover::before {
-                mask-image: url('../images/sprite.svg#icon-cart');
+            mask-image: url('../images/sprite.svg#icon-cart');
 
         }
-        > span {
+
+        >span {
             border-radius: 50%;
             height: 14px;
             width: 14px;
@@ -116,67 +124,70 @@ main {
             display: flex;
             align-items: center;
             justify-content: center;
-            position:absolute;
+            position: absolute;
             top: 8px;
             left: 27px;
             color: white;
             font-size: 10px;
-            
+
         }
     }
 
 }
 
-.hero{
-&__wrapper {
-    height: 72.36842105263158vh;
-    width: 100%;
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.hero {
+    &__wrapper {
+        height: 72.36842105263158vh;
+        width: 100%;
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 
-    p {
-        max-width: 476px;
-        padding: 20px 0;
+        p {
+            max-width: 476px;
+            padding: 20px 0;
+        }
+
+        p>span {
+            text-transform: uppercase;
+            font-size: calc(66px + (66 - 40) * ((100vw - 375px) / (1920 - 375)));
+            line-height: 1.3;
+            @extend %Rubik-500;
+            font-size: 66px;
+        }
+
+        p>span>span {
+            color: $orange-900;
+        }
+
+
+
     }
 
-    p > span {
-        text-transform: uppercase;
-        font-size: calc(66px + (66 - 40)  * ((100vw - 375px) / (1920 - 375)));
-        line-height: 1.3;
-        @extend %Rubik-500;
-        font-size: 66px;
-    }
+    &__order-btn {
+        background-color: $orange-900;
+        color: $silver-100;
+        padding: 12px 32px;
+        margin-right: 25px;
 
-    p > span > span {
-        color: $orange-900;
-    }
+        &:focus {
+            background-color: $Sea_foam;
+            color: $orange-900;
+        }
 
+        &:hover {
+            box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+            background-color: $Sea_foam;
+            color: $orange-900;
+        }
 
-   
-}
-&__order-btn {
-    background-color: $orange-900;
-    color: $silver-100;
-    padding: 12px 32px;
-    margin-right: 25px;
-
-    &:focus {
-        background-color: $Sea_foam;
-        color: $orange-900;
+        &:active {
+            outline: 0;
+        }
     }
-    &:hover {
-        box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-        background-color: $Sea_foam;
-        color: $orange-900;
-    }
-    &:active {
-        outline: 0;
-    }
-}
 
 
 }
@@ -191,10 +202,11 @@ main {
         display: flex;
         margin-bottom: 60px;
     }
+
     &__subscribe {
         display: block;
         margin-right: 3.646vw;
-    
+
 
         &-email {
             width: 200px;
@@ -209,9 +221,9 @@ main {
                 font-size: 14px;
             }
 
-                &:hover::placeholder {
-                    color: $darcBlue-900;
-                }
+            &:hover::placeholder {
+                color: $darcBlue-900;
+            }
         }
 
         &-btn {
@@ -225,23 +237,24 @@ main {
             font-size: 14px;
             color: $silver-100;
 
-            &::before{
+            &::before {
                 content: '';
                 min-width: 16px;
                 height: 15px;
                 background-color: $silver-100;
-                mask-image: url('../images/sprite.svg#icon-telegram');         ; 
+                mask-image: url('../images/sprite.svg#icon-telegram');
+                ;
                 mask-repeat: no-repeat;
                 mask-size: contain;
                 mask-position: center;
             }
-            
+
             &:hover {
                 background-color: $silver-100;
-                color:  $orange-900 ;
-                
+                color: $orange-900;
+
                 &::before {
-                    background-color:  $orange-900;
+                    background-color: $orange-900;
                 }
             }
 
@@ -249,18 +262,18 @@ main {
                 outline: 0;
             }
 
-            &:focus{
+            &:focus {
                 background-color: $Sea_foam;
-                color:  $orange-900 ;
-                
+                color: $orange-900;
+
                 &::before {
-                    background-color:  $orange-900;
+                    background-color: $orange-900;
                 }
             }
-        }           
+        }
     }
-    
-    &__more{
+
+    &__more {
         margin-right: 7.292vw;
 
         &-list {
@@ -278,13 +291,13 @@ main {
         flex-direction: column;
         gap: 15px;
 
-        &-list{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        &-link{
+        &-link {
             font-size: 16px;
             display: flex;
             gap: 7px;
@@ -303,12 +316,14 @@ main {
             &--tel::before {
                 mask-image: url('../images/sprite.svg#icon-call');
             }
+
             &--email::before {
                 mask-image: url('../images/sprite.svg#icon-message');
             }
         }
 
     }
+
     &__social {
         display: flex;
         gap: 13px;
@@ -328,7 +343,7 @@ main {
 
             &:hover {
                 background-color: $orange-900;
-                
+
 
                 &::before {
                     background-color: $silver-100;
@@ -346,14 +361,14 @@ main {
             }
         }
     }
-    
+
 
     &__bottom {
-        padding:  3.289473684210526vh;
+        padding: 3.289473684210526vh;
         width: 100%;
         background-color: $darcBlue-900;
 
-        > p {
+        >p {
             font-size: 14px;
             color: $silver-100;
             text-align: center;
@@ -379,13 +394,14 @@ main {
             font-size: 20px;
             color: $darcBlue-900;
             box-shadow: 0px 0px 0px 1px $siver-200;
-        
-            &::before{
+
+            &::before {
                 content: '';
                 min-width: 44px;
                 height: 44px;
                 background-color: $darcBlue-900;
-                mask-image: url('../images/sprite.svg#icon-category-burger');         ; 
+                mask-image: url('../images/sprite.svg#icon-category-burger');
+                ;
                 mask-repeat: no-repeat;
                 mask-size: contain;
                 mask-position: center;
@@ -397,9 +413,10 @@ main {
 
                 &::before {
                     background-color: $orange-900;
-                    
+
                 }
             }
+
             &:active {
                 background-color: $white;
                 box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
@@ -414,14 +431,15 @@ main {
                 mask-image: url('../images/sprite.svg#icon-category-pizza');
             }
 
-            &--sandvich::before{
+            &--sandvich::before {
                 mask-image: url('../images/sprite.svg#icon-category-sandvich');
             }
-            
-            &--asia::before{
+
+            &--asia::before {
                 mask-image: url('../images/sprite.svg#icon-category-asia');
             }
-            &--set::before{
+
+            &--set::before {
                 mask-image: url('../images/sprite.svg#icon-category-dish');
             }
         }
@@ -450,22 +468,21 @@ main {
     outline: 1px solid $siver-200;
     padding: 20px;
     gap: 10px;
+    height: 300px;
+    position: relative;
 
 
-    &__img {
-        max-width: 140px;
-        width: 100%;
-        
-    }
+
 
     &__name {
         font-size: 15px;
         line-height: 1.185;
     }
 
-    & > span {
+    &>span {
         font-size: 15px;
         @extend %Rubik-500;
+
     }
 
     &__btn {
@@ -473,25 +490,28 @@ main {
         background-color: $orange-900;
         color: $white;
         padding: 7px 14px;
+        position: absolute;
+        bottom: 20px;
 
         &:focus {
             background-color: $Sea_foam;
             color: $orange-900;
         }
+
         &:hover {
             box-shadow: 0px 5px 12px rgba(255, 104, 56, 0.2), 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
             background-color: $Sea_foam;
             color: $orange-900;
         }
+
         &:active {
             outline: 0;
         }
     }
+
     &__detailed-btn {
         margin: 0 auto;
     }
 }
 
 @import 'media';
-
-

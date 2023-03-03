@@ -7,13 +7,13 @@ html {
 *::before {
     box-sizing: inherit;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6
- {
+h6 {
     margin: 0;
     font-weight: normal;
 }
@@ -46,6 +46,7 @@ img {
     max-width: 100%;
     display: block;
 }
+
 button {
     background-color: transparent;
     padding: 0;
@@ -68,4 +69,3 @@ label {
 address {
     font-style: normal;
 }
-
