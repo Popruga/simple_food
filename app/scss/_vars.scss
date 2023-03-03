@@ -1,0 +1,25 @@
+$orange-900: #FF6838;
+$siver-200: #ececec;
+$silver-100: #f9faff;
+$gray: #c2c2c2;
+$darcBlue-900: #363853; 
+$dark: #31352B;
+$white: #ffffff;
+
+$Sea_foam: rgba(255, 104, 56, 0.1);
+
+%Rubik-400{
+    font-family: 'Rubik-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%Rubik-500{
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%Rubik-italic{
+    font-family: 'Rubik-Italic', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}

@@ -46,3 +46,26 @@ img {
     max-width: 100%;
     display: block;
 }
+button {
+    background-color: transparent;
+    padding: 0;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+    color: inherit;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+}
+
+label {
+    display: block;
+}
+
+address {
+    font-style: normal;
+}
+

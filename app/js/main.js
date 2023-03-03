@@ -1,3 +1,3 @@
 $(function(){
-    console.log('Hello');
+        var mixer = mixitup('.product');
 });
