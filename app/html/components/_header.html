@@ -2,30 +2,29 @@
     <div class="container">
         <nav class="header__nav">
             <a class="logo" href="#">
-                <img class="logo_img btn" src="images/logo.svg" alt="Логотип" width="200" height="39">
+                <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="39">
                 <span class="sr-only">Логотип</span>
             </a>
-            <div class="menu">
-                <ul class="menu__items">
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Головна</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Страви</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Контакти</a>
-                    </li>
-                </ul>
-                <ul class="menu__list">
-                    <li class="">
-                        <button class="menu__btn" type="button"><span class="sr-only">Пошук по сайту</span></button>
-                    </li>
-                    <li class="">
-                        <button class="menu__btn menu__btn--cart" type="button"><span>4</span><span
-                                class="sr-only">Корзина товарів</span></button>
-                    </li>
-                </ul>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link menu__link--current" href="#">Головна</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Страви</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Контакти</a>
+                </li>
+            </ul>
+
+            <div class="header__actions">
+                <button class="btn-sm icon icon--search" type="button">
+                    <span class="sr-only">Пошук по сайту</span>
+                </button>
+                <button class="btn-sm header__btn icon icon--cart" type="button">
+                    <span class="btn-counter">4</span>
+                    <span class="sr-only">Кошик товарів</span>
+                </button>
             </div>
         </nav>
     </div>

@@ -1,99 +1,111 @@
 <footer class="footer">
     <div class="container">
-        <div class="footer__items">
-            <div class="footer__subscribe">
-                <a class="logo" href="#">
-                    <img class="logo_img btn" src="images/logo.svg" alt="Логотип" width="200" height="39">
+        <section class="footer__content">
+            <h2 class="sr-only">Додаткова інформація</h2>
+            <div class="footer__subscription">
+                <h3 class="sr-only">Інформація про підписку</h3>
+                <a class="logo footer__logo" href="#">
+                    <img class="logo_img" src="images/logo.svg" alt="Логотип" width="200" height="39">
                     <span class="sr-only">Логотип</span>
                 </a>
-                <form action="#" class="form">
-                    <span class="sr-only"><label class="form__label" for="email">Поле для введення email
-                            адреси</label></span>
-                    <input class="footer__subscribe-email" type="email" name="email" id="email" placeholder="Ваш email"
-                        required>
-                    <button class="footer__subscribe-btn" type="submit">Підписатися</button>
-                </form>
-
+                <div class="subscription">
+                    <form class="form">
+                        <label class="sr-only" for="subscription">Поле для введення email адреси</label>
+                        <input class="form__field" type="email" name="subscription" id="subscription"
+                            placeholder="Ваш email" required>
+                        <button class="btn icon icon--send subscription__btn" type="submit">Підписатися</button>
+                    </form>
+                </div>
             </div>
-            <div class="footer__more">
-                <ul class="footer__more-list">
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Як це працює</a>
+            <div class="footer__nav">
+                <h3 class="sr-only">Навігація по сайту</h3>
+                <ul class="menu footer__menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Як це працює</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Продукти</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Продукти</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Страви</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Страви</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Меню</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Меню</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Про нас</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Про нас</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Новини</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Новини</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Партнери</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Партнери</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">ЧаПи</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">ЧаПи</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Застосунок</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Застосунок</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Блог</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Блог</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Що нового</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Що нового</a>
                     </li>
-                    <li class="footer__more-item">
-                        <a class="footer__more-link" href="#">Мапа сайту</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Мапа сайту</a>
                     </li>
                 </ul>
             </div>
-            <address class="footer__contacts">
-                <ul class="footer__contacts-list">
-                    <li class="footer__contacts-item">
-                        <a class="footer__contacts-link" href="#">вул. Т.Г.Шевченка, 1</a>
+            
+
+            <div class="footer__contacts">
+                <h3 class="sr-only">Контактна інформація</h3>
+            </div>
+            <address class="contacts">
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <a class="contacts__link icon icon--address" href="#">вул. Т.Г.Шевченка, 1</a>
                     </li>
-                    <li class="footer__contacts-item">
-                        <a class="footer__contacts-link footer__contacts-link--tel" href="tel:+380501112233">38 050 11
+                    <li class="contacts__item">
+                        <a class="contacts__link icon icon--phone" href="tel:+380501112233">38 050 11
                             12 233</a>
                     </li>
-                    <li class="footer__contacts-item">
-                        <a class="footer__contacts-link footer__contacts-link--email"
+                    <li class="contacts__item">
+                        <a class="contacts__link icon icon--email"
                             href="mailto:support@sfood.com">support@sfood.com</a>
                     </li>
                 </ul>
-                <ul class="footer__social">
-                    <li class="footer__social-item">
-                        <a class="footer__social-link" href="https://uk-ua.facebook.com/"
-                            style="background-image: url('images/sprite.svg#icon-facebook')" target="_blank">
-                            <span class="sr-only">Підписатися на Facebook</span></a>
+                <ul class="social">
+                    <li class="social__item">
+                        <a class="social__link" href="https://uk-ua.facebook.com/" target="_blank">
+                            <span class="sr-only">Підписатися на Facebook</span>
+                            <span class="social__icon" style="-webkit-mask-image: url('images/sprite.svg#icon-facebook'); mask-image: url('images/sprite.svg#icon-facebook');"></span>
+                        </a>
                     </li>
-                    <li class="footer__social-item">
-                        <a class="footer__social-link" href="https://uk-ua.facebook.com/"
-                            style="background-image: url('images//sprite.svg#icon-twitter')" target="_blank">
-                            <span class="sr-only">Підписатися на Twitter</span></a>
+
+                    <li class="social__item">
+                        <a class="social__link" href="https://uk-ua.facebook.com/" target="_blank">
+                            <span class="sr-only">Підписатися на Twitter</span>
+                            <span class="social__icon" style="-webkit-mask-image:url('images//sprite.svg#icon-twitter'); mask-image: url('images//sprite.svg#icon-twitter');"></span>
+                        </a>
                     </li>
-                    <li class="footer__social-item">
-                        <a class="footer__social-link" href="https://www.instagram.com/"
-                            style="background-image: url('images/sprite.svg#icon-instagram')" target="_blank">
-                            <span class="sr-only">Підписатися на Instagram</span></a>
+                    <li class="social__item">
+                        <a class="social__link" href="https://www.instagram.com/" target="_blank">
+                            <span class="sr-only">Підписатися на Instagram</span>
+                            <span class="social__icon" style="-webkit-mask-image:url('images/sprite.svg#icon-instagram'); mask-image: url('images/sprite.svg#icon-instagram')"></span>
+                        </a>
                     </li>
                 </ul>
             </address>
         </div>
+    </section>
 
     </div>
     <div class="footer__bottom">
         <p>
-            &#169;
-            2023 Simple Food
+            &copy; 2023 Simple Food
         </p>
     </div>
 </footer>

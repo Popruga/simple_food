@@ -1,0 +1,79 @@
+$leftPos: calc(((100vw - 1170px) /2) + 70px);
+
+.delivery {
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left $leftPos center;
+    position: relative;
+
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 585px;
+        padding: 0 70px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 470px;
+
+    }
+
+
+
+
+    &__description {
+        line-height: 1.5;
+        font-size: 20px;
+    }
+
+    &__list {
+    font-size: 24px;
+    line-height: 150%;
+    padding: 0;
+    
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        &::before {
+            content: '';
+            min-width: 44px;
+            height: 34px;
+            background-color: $c-orange-900;
+            mask-image: url('../images/sprite.svg#icon-timer');
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+        }
+        &--courier {
+
+            &::before {
+                background-color: $c-icon-blue;
+                mask-image: url('../images/sprite.svg#icon-delivery');
+            }
+        }
+
+        &--restoraunte {
+
+            &::before {
+                background-color: $c-icon-red;
+                mask-image: url('../images/sprite.svg#icon-restorant');
+
+            }
+        }
+    }
+
+    .btn {
+        max-width: fit-content;
+    }
+}
+

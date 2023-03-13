@@ -1,4 +1,4 @@
-html {
+:root {
     box-sizing: border-box;
 }
 
@@ -11,30 +11,47 @@ html {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    font-weight: normal;
-}
-
+body,
 figure,
 blockquote,
-body,
-p,
 ul,
 ol {
     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
 }
 
 ul,
 ol {
     padding: 0;
+    list-style-type: none;
 }
 
-ul li,
-ol li {
-    list-style-type: none;
+label {
+    display: block;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    outline: 0;
+    border: 0;
+    appearance: none;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
 }
 
 a {
@@ -47,24 +64,6 @@ img {
     display: block;
 }
 
-button {
-    background-color: transparent;
-    padding: 0;
-}
-
-button,
-input,
-textarea {
-    font: inherit;
-    color: inherit;
-    outline: 0;
-    border: 0;
-    appearance: 0;
-}
-
-label {
-    display: block;
-}
 
 address {
     font-style: normal;

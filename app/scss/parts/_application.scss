@@ -1,0 +1,46 @@
+$righPos: calc(((100vw - 1170px) /2));
+
+.application {
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right $righPos center;
+    position: relative;
+
+    &__wrapper {
+        padding: 40px 0;
+        max-width: 470px;
+    }
+
+    .title {
+        margin-bottom: 45px;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+
+	&__list {
+        display: flex;
+        gap: 30px;
+		}
+
+	&__item {
+		}
+
+	&__link {
+       display: inline-block;
+        min-width: 120px;
+        height: 40px;
+        background-repeat: no-repeat;
+
+        &--google {
+            min-width: 135px;
+        }
+		}
+
+}

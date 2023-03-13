@@ -1,0 +1,121 @@
+.restaurants-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: $c-white;
+
+    transition: outline-color 0.3s;
+    box-shadow: 0px 3px 3px rgba($c-black, 0.1);
+   
+        
+    &:hover {
+        box-shadow: 0px 3px 15px rgba($c-orange-900, 0.5);
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    &__link {
+            
+        outline-color: $c-orange-900;
+        outline: 0;
+
+        &:first-child {
+            order: 2;
+        }
+
+        &:nth-child(2) {
+            order: 1;
+        }
+    }
+
+    &__img {
+        width: fit-content;
+        margin-bottom: 15px;
+        
+
+    }
+
+    &__inner {
+        order: 3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+    }
+
+    &__time {
+        font-size: 18px;
+        color: $c-dark;
+        font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        
+            &::before {
+                content: '';
+                min-width: 30px;
+                height: 30px;
+                background-color: $c-dark;
+                mask-image: url('../images/sprite.svg#icon-time');
+                mask-repeat: no-repeat;
+                mask-size: contain;
+                mask-position: center;
+                transition: background-color 0.3s;
+            }
+    }
+
+    &__btn {
+
+        padding: 5px 28px;
+        border-radius: 20px;
+        min-width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        
+
+        &::before {
+            content: '';
+            min-width: 24px;
+            height: 24px;
+            background-color: $c-white;
+            mask-image: url('../images/sprite.svg#icon-arrow-right');
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+            transition: all 0.3s;
+        }
+
+        &:focus {
+            background-color: $c-orange-900;
+            box-shadow: 0;
+        }
+
+        &:hover {
+            box-shadow: 0;
+            outline-color: $c-orange-900;
+            padding: 5px 4px 5px 48px;
+
+            &::before {
+                background-color: $c-orange-900;
+            }
+        }
+
+        &:active {
+            outline-color: transparent;
+            padding: 5px 28px;
+
+            &::before {
+                background-color: $c-orange-900;
+            }
+        }
+    }
+
+}
