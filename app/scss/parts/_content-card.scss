@@ -1,0 +1,108 @@
+.content-card {
+    $this: &;
+    height: 100%;
+    max-width: 370px;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px 0 rgba($c-dark, 0.1);
+    overflow: hidden;
+    transition: all 0.3s;
+
+    @include r(568) {
+        max-width: 345px;
+    }
+
+    &:hover {
+        box-shadow:  0 3px 15px 0 rgba($c-orange-900, 0.5);
+
+        #{$this}__img{
+            transform: scale(1.2) rotate(5deg);
+
+        }
+    }
+
+    &__head {
+        @include adaptive-image(370px, 300px);
+        overflow: hidden;
+
+        @include r($size-xs) {
+            padding-bottom: 300px;
+        }
+    }
+
+    &__img {
+        transition: transform 0.3s;
+    }
+
+    &__content {
+        padding: 15px 20px 20px 20px;
+    }
+
+    &__title {
+        font-size: 24px;
+        // margin-bottom: 20px;
+
+        & + #{this}__actions {
+            margin-top: 20px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__time {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: calc(30/18);
+        gap: 10px;
+
+        &:hover {
+            &::before {
+                background-color: $c-dark;
+            }
+        }
+
+        &::before {
+            min-width: 22px;
+            height: 22px;
+        }
+
+    }
+
+    &__btn {
+        border-radius: 20px;
+        min-width: 80px;
+        padding: 10px;
+        display: flex;
+
+
+        &::before {
+            min-width: 14px;
+            height: 12px;
+            background-color: $c-white;
+            transition: all 0.3s;
+        }
+
+        &:focus {
+            &::before {
+                background-color: $c-orange-900;
+            }
+        }
+
+        &:hover {
+            &::before {
+                background-color: $c-orange-900;
+                margin-left: 40px;
+            }
+        }
+
+        &:active {
+            &::before {
+                background-color: $c-orange-900;
+                margin-left: 0px;
+            }
+        }
+    }
+}

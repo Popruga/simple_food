@@ -1,0 +1,92 @@
+.mobile__nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    z-index: 999;
+    bottom: 0;
+    background-color: $c-white;
+    opacity: 0;
+    transform: translate(-200%);
+    transition: opacity 0.3s, transform 0.3s;
+
+    @include r($size-md) {
+        display: block;
+
+    }
+
+    &.open {
+    opacity: 1;
+    transform: translate(0);
+    }
+
+    &-head {
+        padding: 25px 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-menu {
+        padding: 25px 15px;
+        border: {
+            top: 1px solid $c-gray;
+            bottom: 1px solid $c-gray;
+        }
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        }
+    
+
+    &-contacts {
+        padding: 15px;
+
+    }
+}
+
+.burger {
+    display: none;
+
+    @include r($size-md) {
+        display: flex;
+    }
+    min-width: 44px;
+    height: 44px;
+
+    &::before {
+        min-width: 30px;
+        height: 30px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        &::before {
+            background-color: $c-darkBlue-900;
+        }
+    }
+}
+
+.close-btn {
+    min-width: 40px;
+    height: 40px;
+
+    &::before {
+        min-width: 18px;
+        height: 18px;
+    }
+}
+
+.lock {
+    overflow: hidden;
+
+    .header {
+        &::before {
+            @include r($size-md) {
+                opacity: 1;
+                visibility: visible;
+                z-index: 10;
+            }
+        }
+    }
+}

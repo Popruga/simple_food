@@ -1,0 +1,95 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $c-white;
+    z-index: 99;
+    padding: size(60, 14) 0;
+    border-bottom: 3px solid transparent;
+    transition: padding 0.3s, border-color 0.3s;
+    display: flex;
+
+
+    &.sticky {
+        padding: 15px 0;
+        border-color: $c-orange-900;
+    }
+
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($c-dark, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        z-index: -100;
+        transition: opacity 0.3s;
+    }
+
+   @at-root .lock {
+        overflow: hidden;
+    
+        .header {
+            &::before {
+                @include r($size-md) {
+                    opacity: 1;
+                    visibility: visible;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+    
+    &__menu {
+        @include r($size-md) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        @include r($size-xs) {
+            width: 115px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        @include r($size-md) {
+            margin-left: auto;
+        }
+    }
+
+    &__btn {
+        &:hover {
+            .btn-counter {
+                color: $c-orange-900;
+                background-color: $c-white;
+            }
+        }
+
+        &:active {
+            .btn-counter {
+                color: $c-white;
+                background-color: $c-orange-900;
+            }
+        }
+    }
+}
+
+
+// @include r(768) {
+//     font-size: 20px;
+// }

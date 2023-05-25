@@ -1,0 +1,153 @@
+.reviews {
+
+    &__list {
+        margin-bottom: 30px;
+    
+        @include r($size-xs) {
+            margin-bottom: 0;
+        }
+    }
+
+
+    &__actions {
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 23px;
+    }
+    
+    &__btn {
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        border: 3px solid $c-orange-900;
+        cursor: pointer;
+        outline: 2px solid transparent;
+        transition: all 0.3s;
+
+        &::before {
+            content: '';
+            min-width: 19px;
+            height: 19px;
+            display: inline-block;
+            mask-image: url('../images/sprite.svg#icon-right');
+            background-color: $c-orange-900; 
+            mask-repeat: no-repeat;
+            mask-size: contain;
+            mask-position: center;
+            transition: all 0.3s;
+        }
+
+        @include r($size-xs) {
+            position: absolute;
+            top: 30px;
+        }
+
+        &--prev {
+            &::before {
+            mask-image: url('../images/sprite.svg#icon-left');
+            }
+
+            @include r($size-xs) {
+                left: calc(50% - 140px);
+            }
+        }
+
+        &--next {
+            @include r($size-xs) {
+                right: calc(50% - 140px);
+            }
+        }
+
+
+        &[disabled] {
+            border-color: $c-gray;
+            &:focus,
+            &:hover,
+            &:active {
+                border-color: inherit;
+                outline-color: transparent;
+                background-color: inherit;
+            }
+
+            &::before {
+                background-color: $c-gray;
+            }
+        }
+
+        &:focus {
+            outline-color: rgba($c-orange-900, 0.5);
+        }
+
+        &:hover {
+            border-color: rgba($c-orange-900, 0.5);
+            background-color: rgba($c-orange-900, 0.1);
+            outline-color: transparent;
+
+            &::before {
+                background-color: rgba($c-orange-900, 0.5);
+                }
+        }
+
+        &:active {
+            border-color: rgba($c-orange-900, 0.1);
+            background-color: rgba($c-orange-900, 0.1);
+            outline-color: transparent;
+
+            &::before {
+                background-color: $c-orange-900;
+                }
+        }
+    }
+
+    &__dots {
+        display: flex;
+        gap: 15px;
+    }
+
+    &__dot {
+
+        min-width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        outline: 2px solid transparent;
+        background-color: $c-gray;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &--active {
+            background-color: $c-orange-900;
+        }
+
+        &:focus {
+            outline-color: $c-orange-900;
+        }
+
+        &:hover {
+            outline-color: rgba($c-orange-900, 0.5);
+            background-color: rgba($c-orange-900, 0.1);
+        }
+
+        &:active {
+            outline-color: transparent;
+            background-color: rgba($c-orange-900, 0.5);
+        }
+    }
+
+    &__slider {
+        .reviews__dots {
+            @include r($size-xs) {
+                display: none;
+            }
+        }
+    }
+}
+
+
+

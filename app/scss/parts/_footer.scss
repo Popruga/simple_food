@@ -1,0 +1,210 @@
+.footer {
+
+    &__content {
+        display: flex;
+        flex-wrap:wrap;
+        gap: size(70, 30);
+        margin-bottom: 60px;
+
+        @include r($size-md) {
+            justify-content: center;
+        }
+
+        @include r($size-sm) {
+            justify-content: flex-start;
+        }
+    }
+
+
+    &__logo {
+        margin-bottom: 30px;
+    }
+
+    &__nav {
+        @include r($size-md) {
+            order: 3;
+        }
+    }
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-auto-flow: column;
+        gap: 20px 90px;
+
+        @include r($size-xs) {
+            grid-template-columns: repeat(1, 300px);
+            grid-auto-flow: unset;
+        }
+
+        .menu__item {
+            grid-column: 3;
+            @include r($size-xs) {
+                grid-column: unset;
+            }
+            &:nth-child(-n+4) {
+                grid-column: 1;
+                @include r($size-xs) {
+                    grid-column: unset;
+                }
+            }
+
+            &:nth-child(n+5):nth-child(-n+8) {
+                grid-column: 2;
+                @include r($size-xs) {
+                    grid-column: unset;
+                }
+            }
+        }
+    }
+
+
+    &__contacts {
+        margin-left: auto;
+        margin-right: size(80, 0);
+
+        @include r($size-md) {
+            margin-left: 0;
+        }
+
+        @include r($size-xs) {
+            order: 2;
+        }
+    }
+
+    &__bottom {
+        font-size: 14px;
+        line-height: 1;
+        color: $c-white;
+        background-color: $c-darkBlue-900;
+        padding: 30px;
+        text-align: center;
+    }
+}
+
+.subscription {
+
+    .form__field {
+        margin-bottom: 12px;
+        width: 200px;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        min-width: 200px;
+        padding: 13px 30px;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0;
+
+        &::before {
+            background-color: $c-white;
+            min-width: 16px;
+        }
+
+        &:focus,
+        &:hover,
+        &:active {
+            &::before {
+            background-color: $c-orange-900;
+        }
+        }
+    }
+}
+.form {
+
+    &__field {
+        border-radius: 5px;
+        outline: 1px solid $c-gray;
+        padding: 13px 15px;
+        transition: all 0.3s;
+
+        &::placeholder {
+            color: $c-gray;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        &:focus {
+            outline-color: $c-orange-900;
+            outline-width: 2px;
+        }
+
+        &:hover {
+            &::placeholder {
+                color: $c-dark;
+            }
+        }
+    }
+}
+
+.contacts {
+
+    &__item {
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        line-height: 2;
+        gap: 7px;
+        justify-content: flex-start;
+
+        &:hover {
+            &::before {
+                background-color: $c-orange-900;
+            }
+        }
+    }
+}
+
+.social {
+
+    display: flex;
+    gap: 13px;
+
+    &__link {
+        min-width: 39px;
+        height: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $c-silver-200;
+        border-radius: 50%;
+        outline: 2px solid transparent;
+        transition: all 0.3s;
+
+        &:focus {
+            outline-color: rgba($c-orange-900, 0.7);
+            background-color: rgba($c-orange-900, 0.1);
+        }
+
+        &:hover {
+            background-color: $c-orange-900;
+
+            .social__icon {
+                background-color: $c-white;
+            }
+        }
+
+        &:active {
+            outline-color: transparent;
+            background-color: rgba($c-orange-900, 0.1);
+
+            .social__icon {
+                background-color: $c-orange-900;
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        background-color: $c-dark;
+    }
+}

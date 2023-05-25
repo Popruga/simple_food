@@ -1,0 +1,20 @@
+.popular {
+
+    &__nav {
+        margin-bottom: size(45, 24);
+
+    }
+
+    &-list {
+        margin-bottom: size(60, 30);
+    }
+
+    &__btn {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+
+
