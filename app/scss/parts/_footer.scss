@@ -3,13 +3,27 @@
     &__content {
         display: flex;
         flex-wrap:wrap;
-        gap: 70px;
+        gap: size(70, 30);
         margin-bottom: 60px;
+
+        @include r($size-md) {
+            justify-content: center;
+        }
+
+        @include r($size-sm) {
+            justify-content: flex-start;
+        }
     }
 
 
     &__logo {
         margin-bottom: 30px;
+    }
+
+    &__nav {
+        @include r($size-md) {
+            order: 3;
+        }
     }
 
     &__menu {
@@ -18,15 +32,28 @@
         grid-auto-flow: column;
         gap: 20px 90px;
 
+        @include r($size-xs) {
+            grid-template-columns: repeat(1, 300px);
+            grid-auto-flow: unset;
+        }
+
         .menu__item {
             grid-column: 3;
-
+            @include r($size-xs) {
+                grid-column: unset;
+            }
             &:nth-child(-n+4) {
                 grid-column: 1;
+                @include r($size-xs) {
+                    grid-column: unset;
+                }
             }
 
             &:nth-child(n+5):nth-child(-n+8) {
                 grid-column: 2;
+                @include r($size-xs) {
+                    grid-column: unset;
+                }
             }
         }
     }
@@ -34,7 +61,15 @@
 
     &__contacts {
         margin-left: auto;
-        margin-right: 80px;
+        margin-right: size(80, 0);
+
+        @include r($size-md) {
+            margin-left: 0;
+        }
+
+        @include r($size-xs) {
+            order: 2;
+        }
     }
 
     &__bottom {

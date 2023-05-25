@@ -5,14 +5,26 @@
 @import 'reset';
 @import 'global';
 
+
+@import 'parts/breadcrumbs';
+
+@import 'parts/menu';
 @import 'parts/header';
 @import 'parts/hero-section';
 @import 'parts/popular';
 @import 'parts/product-card';
+
 @import 'parts/categories';
+
 @import 'parts/delivery';
+
 @import 'parts/restaurants';
-@import 'parts/restaurants-card';
+@import 'parts/content-card';
 @import 'parts/reviews';
+@import 'parts/reviews-card';
 @import 'parts/application';
+@import 'parts/catalog';
 @import 'parts/footer';
+@import 'parts/mobile-nav';
+@import 'parts/product-page';
+@import 'parts/catalog';

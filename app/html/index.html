@@ -1,5 +1,8 @@
-@include('components/_head.html')
-    @include('components/_header.html')   
+@include('components/_head.html', {
+    name: 'Головна сторінка'
+})
+    @include('components/_header.html')
+
     <main class="page">
         @include('components/_hero.html')
         @include('components/_popular.html')

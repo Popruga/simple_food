@@ -9,11 +9,26 @@ $righPos: calc( (100vw - 1170px) /2 );
     background-size: contain;
     background-position: right $righPos center;
 
+    @include r($size-lg) {
+      min-height: size(660, 300, 1200);
+      background-position: right 15px center;
+      background-size: size(560, 254) auto;
+      }
 
+      @include r($size-sm) {
+            background-color: rgba($c-white, 0.85);
+            background-blend-mode: overlay;
+      }
+
+
+            &__container {
+                  padding: 25px 0;
+                  max-width: 480px;
+            }
 
 
 		&__title {
-            max-width: 480px;
+            
             @include fz(66, 40);
             color: $c-darkBlue-900;
             margin-bottom: 20px;
@@ -29,7 +44,7 @@ $righPos: calc( (100vw - 1170px) /2 );
             max-width: 450px;
             line-height: 1.5;
             margin-bottom: 20px;
-            font-size: 20px;
+            font-size: size(20, 16);
 		}
 
 		&__actions {

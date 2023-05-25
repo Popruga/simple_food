@@ -1,22 +1,21 @@
 <header class="header">
     <div class="container">
         <nav class="header__nav">
-            <a class="logo" href="#">
+            <a class="logo header__logo" href="#">
                 <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="39">
                 <span class="sr-only">Логотип</span>
             </a>
-            <ul class="menu">
+            <ul class="menu header__menu">
                 <li class="menu__item">
-                    <a class="menu__link menu__link--current" href="#">Головна</a>
+                    <a class="menu__link menu__link--current" href="index.html">Головна</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#">Страви</a>
+                    <a class="menu__link" href="catalog.html">Страви</a>
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#">Контакти</a>
                 </li>
             </ul>
-
             <div class="header__actions">
                 <button class="btn-sm icon icon--search" type="button">
                     <span class="sr-only">Пошук по сайту</span>
@@ -25,7 +24,73 @@
                     <span class="btn-counter">4</span>
                     <span class="sr-only">Кошик товарів</span>
                 </button>
+                <button class="burger icon icon--burger-menu" type="button">
+                    <span class="sr-only">Показати меню</span>
+                </button>
             </div>
         </nav>
     </div>
+
+    
+    <div class="mobile__nav">
+        <div class="mobile__nav-head">
+            <a class="logo" href="#">
+                <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="39">
+                <span class="sr-only">Логотип</span>
+            </a>
+            <button class="close-btn icon icon--close" type="button">
+                <span class="sr-only">Сховати меню</span>
+            </button>
+
+        </div>
+        <ul class="menu mobile__nav-menu">
+            <li class="menu__item">
+                <a class="menu__link menu__link--current" href="#">Головна</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Страви</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Контакти</a>
+            </li>
+        </ul>
+        <address class="contacts mobile__nav-contacts">
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <a class="contacts__link icon icon--address" href="#">вул. Т.Г.Шевченка, 1</a>
+                </li>
+                <li class="contacts__item">
+                    <a class="contacts__link icon icon--phone" href="tel:+380501112233">38 050 11
+                        12 233</a>
+                </li>
+                <li class="contacts__item">
+                    <a class="contacts__link icon icon--email"
+                        href="mailto:support@sfood.com">support@sfood.com</a>
+                </li>
+            </ul>
+            <ul class="social">
+                <li class="social__item">
+                    <a class="social__link" href="https://uk-ua.facebook.com/" target="_blank">
+                        <span class="sr-only">Підписатися на Facebook</span>
+                        <span class="social__icon" style="-webkit-mask-image: url('images/sprite.svg#icon-facebook'); mask-image: url('images/sprite.svg#icon-facebook');"></span>
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a class="social__link" href="https://uk-ua.facebook.com/" target="_blank">
+                        <span class="sr-only">Підписатися на Twitter</span>
+                        <span class="social__icon" style="-webkit-mask-image:url('images//sprite.svg#icon-twitter'); mask-image: url('images//sprite.svg#icon-twitter');"></span>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="https://www.instagram.com/" target="_blank">
+                        <span class="sr-only">Підписатися на Instagram</span>
+                        <span class="social__icon" style="-webkit-mask-image:url('images/sprite.svg#icon-instagram'); mask-image: url('images/sprite.svg#icon-instagram')"></span>
+                    </a>
+                </li>
+            </ul>
+        </address>
+    </div>
+
 </header>
+<div class="wrapper">
